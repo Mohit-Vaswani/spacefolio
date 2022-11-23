@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import {Route, Routes, HashRouter} from 'react-router-dom';
+import Home from './Pages/Home';
+import FunFacts from './Pages/FunFacts';
+import SpaceInfo from './Pages/SpaceInfo';
+import SpaceQuiz from './Pages/SpaceQuiz';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+  return(
+  <div className='App'>
+  <HashRouter>
+    <Routes>
+      <Route path='/' element={<Home/>} />
+      <Route path='funfacts' element={<FunFacts/>} />
+      <Route path='spaceinfo' element={<SpaceInfo/>} />
+      <Route path='spacequiz' element={<SpaceQuiz/>} />
+    </Routes>
+  </HashRouter>
+  </div>
+  )
 }
 
 export default App;
