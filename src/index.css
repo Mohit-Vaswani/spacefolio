@@ -1,114 +1,256 @@
-@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Space+Grotesk:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Space+Grotesk:wght@300&display=swap");
 
-:root{
-    --header-height: 3rem;
-    --font-semi: 600;
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+}
+
+/*===== Colores =====*/
+:root {
+  --first-color: #ffffff;
+  --second-color: #0e2431;
+  --space-color: #0550ff;
+}
+
+/*===== Fuente y tipografia =====*/
+:root {
+  --body-font: "Space Grotesk", sans-serif;
+  --logo-font: "Handlee", cursive;
+  --big-font-size: 3rem;
+  --h2-font-size: 1.85rem;
+  --medium-font-size: 1.6rem;
+  --normal-font-size: 1.1rem;
+  --welcome-font-size: 3.75rem;
+  --space-font-size: 6rem;
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --medium-font-size: 1.4rem;
   }
-  
-  /*===== Colores =====*/
-  :root{
-    --first-color: #ffffff;
-    --second-color: #0E2431;
+}
+
+/*===== Margenes =====*/
+:root {
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+}
+
+/*===== Padding =====*/
+:root {
+  --pd-1: 0.5rem;
+  --pd-2: 1rem;
+  --pd-3: 1.5rem;
+  --pd-4: 2rem;
+  --pd-5: 2.5rem;
+  --pd-6: 3rem;
+}
+
+/*===== z index =====*/
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+  background: var(--second-color);
+}
+
+/*========= Navbar =========*/
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: var(--first-color);
+  text-decoration: none;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+}
+
+.logo p {
+  font-family: var(--logo-font);
+  font-size: var(--medium-font-size);
+  font-weight: bold;
+}
+
+.navlist {
+  display: flex;
+  align-items: center;
+}
+
+.navlist a {
+  margin: 1rem;
+  color: var(--first-color);
+  font-size: var(--normal-font-size);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navlist a:hover {
+  color: skyblue;
+}
+
+.navlist img {
+  width: 30px;
+}
+
+/*====== Home =======*/
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: var(--mb-4);
+}
+
+.mainText {
+  line-height: 0.3;
+}
+
+.mainText h3 {
+  font-size: var(--welcome-font-size);
+}
+
+.mainText h1 {
+  font-size: var(--space-font-size);
+  font-family: var(--logo-font);
+  color: var(--space-color);
+  text-shadow: 5px 5px 1px #ffffff;
+  letter-spacing: 10px;
+}
+
+section p {
+  font-size: var(--medium-font-size);
+  padding: 0 20%;
+  margin: var(--mb-6) 0;
+}
+
+.btn {
+  padding: var(--pd-1) var(--pd-6);
+  font-size: var(--medium-font-size);
+  background: var(--space-color);
+  color: var(--first-color);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Button Animation */
+
+.wobble-hor-bottom {
+  -webkit-animation: wobble-hor-bottom 0.8s 4s 3 both;
+  animation: wobble-hor-bottom 0.8s 4s 3 both;
+}
+
+@-webkit-keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
   }
-  
-  /*===== Fuente y tipografia =====*/
-  :root{
-    --body-font: 'Space Grotesk', sans-serif;
-    --logo-font: 'Handlee', cursive;
-    --big-font-size: 2rem;
-    --h2-font-size: 1.25rem;
-    --medium-font-size: 1.6rem;
-    --normal-font-size: 1.1rem;
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+    transform: translateX(-30px) rotate(-6deg);
   }
-  @media screen and (min-width: 768px){
-    :root{
-      --big-font-size: 3.5rem;
-      --h2-font-size: 2rem;
-      --normal-font-size: 1rem;
-      --medium-font-size: 1.4rem;
-    }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+    transform: translateX(15px) rotate(6deg);
   }
-  
-  /*===== Margenes =====*/
-  :root{
-    --mb-1: 0.5rem;
-    --mb-2: 1rem;
-    --mb-3: 1.5rem;
-    --mb-4: 2rem;
-    --mb-5: 2.5rem;
-    --mb-6: 3rem;
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+    transform: translateX(-15px) rotate(-3.6deg);
   }
-  
-  /*===== z index =====*/
-  :root{
-    --z-back: -10;
-    --z-normal: 1;
-    --z-tooltip: 10;
-    --z-fixed: 100;
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+    transform: translateX(9px) rotate(2.4deg);
   }
-  
-  /*===== BASE =====*/
-  *,::before,::after{
-    box-sizing: border-box;
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+    transform: translateX(-6px) rotate(-1.2deg);
   }
-  html{
-    scroll-behavior: smooth;
+}
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
   }
-  body{
-    margin: 0;
-    font-family: var(--body-font);
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+    transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+    transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .mainText h3 {
+    font-size: var(--h2-font-size);
+  }
+  .mainText h1 {
+    font-size: var(--welcome-font-size);
+    text-shadow: 3px 3px 1px #ffffff;
+  }
+  section p {
     font-size: var(--normal-font-size);
-    color: var(--first-color);
-    background: var(--second-color);
+    padding: 0 10%;
   }
-
-
-  /*========= Navbar =========*/
-
-  nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 20px;
-}
-
-.logo{
-    display: flex;
-    align-items: center;
-}
-
-.logo{
-    color: var(--first-color);
-    text-decoration: none;
-}
-
-.logo img{
-    width: 70px;
-    height: 70px;
-}
-
-.logo p{
-    font-family: var(--logo-font);
-    font-size: var(--medium-font-size);
-    font-weight: bold;
-}
-
-.navlist{
-    display: flex;
-    align-items: center;
-}
-
-.navlist a{
-    margin: 1rem;
-    color: var(--first-color);
-    font-weight: var(--normal-font-size);
-    text-decoration: none;
-}
-
-.navlist a:hover{
-    color: skyblue;
-}
-
-.navlist img{
-    width: 30px;
+  .btn {
+    padding: var(--pd-1) var(--pd-4);
+    font-size: var(--normal-font-size);
+  }
 }
