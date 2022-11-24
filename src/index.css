@@ -130,7 +130,7 @@ nav {
 
 /*====== Home =======*/
 
-section {
+.homeSection {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -253,4 +253,17 @@ section p {
     padding: var(--pd-1) var(--pd-4);
     font-size: var(--normal-font-size);
   }
+}
+
+/*========= FunFacts =========*/
+
+.funfact1, .funfact2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15rem;
+}
+
+.imgContainer img{
+  width: 200px
 }
