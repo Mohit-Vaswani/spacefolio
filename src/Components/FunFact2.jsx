@@ -1,13 +1,11 @@
-import planet from "../images/newplanet.png";
-
-const FunFact2 = ({fact}) => {
+const FunFact2 = (props) => {
     return(
         <section className="funfact2">
             <div className="textContainer">
-                <h2>{fact}</h2>
+                <h2>{props.fact}</h2>
             </div>
             <div className="imgContainer">
-                <img src={planet}/>
+                <img className="rotate" src={props.planet}/>
             </div>
         </section>
     )

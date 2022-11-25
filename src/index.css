@@ -10,6 +10,7 @@
   --first-color: #ffffff;
   --second-color: #0e2431;
   --space-color: #0550ff;
+  --bg-color: #eaebed44;
 }
 
 /*===== Fuente y tipografia =====*/
@@ -257,17 +258,33 @@ section p {
 
 /*========= FunFacts =========*/
 
-.flexbox{
-  overflow: scroll !important;
-}
-
 .funfact1, .funfact2{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5rem;
+  width: 80%;
+  border-radius: 10px;
+  margin: var(--mb-6) auto;
+  padding: var(--pd-6) var(--pd-6);
+  background: var(--bg-color);
 }
 
 .imgContainer img{
   width: 200px
+}
+
+/* Rotating Animation */
+
+.rotate {
+  animation: rotation 20s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
 }
