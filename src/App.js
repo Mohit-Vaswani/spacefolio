@@ -16,7 +16,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/funfact" element={<FunFacts/>} />
           <Route path="spaceinfo" element={<SpaceInfo />} />
-          <Route path="spacequiz" element={<SpaceQuiz />} />
+          <Route path="/spacequiz" element={<SpaceQuiz />} />
         </Routes>
       </HashRouter>
     </div>

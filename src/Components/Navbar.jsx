@@ -10,7 +10,7 @@ const Navbar = () => {
             </a>
             <div className='navlist'>
                 <a href='/#/funfact'>Fun Facts</a>
-                <a href='/spacequiz'>Quiz</a>
+                <a href='/#/spacequiz'>Quiz</a>
                 <a href='https://github.com/Mohit-Vaswani/spacefolio'><img src={github} alt="github logo"/></a>
             </div>
         </nav>
