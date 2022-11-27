@@ -1,4 +1,4 @@
-import Navbar from "../Components/Navbar";
+// import Navbar from "../Components/Navbar";
 import { useState } from "react";
 
 const QUIZ_QUESTIONS = [
@@ -73,33 +73,33 @@ const SpaceQuiz = () => {
     setShowScore(false);
   };
   return (
-    <main className="">
-      <section className="">
-        <div className="">
-          <h3 className="">Quiz Time</h3>
+    <main>
+      <section>
+        <div className="quizContainer">
+          <h3>Quiz Time</h3>
           {showScore ? (
-            <div className="">
-              <p className="">
+            <div className="smallContainer">
+              <p>
                 You have scored {score} out of {QUIZ_QUESTIONS.length}
               </p>
-              <button className="" type="submit" onClick={resetQuiz}>
+              <button className="playButton" type="submit" onClick={resetQuiz}>
                 Play Again!!
               </button>
             </div>
           ) : (
             <>
-              <h2 className="">{QUIZ_QUESTIONS[currentQuestion].Question}</h2>
-              <div className="">
+              <h2>{QUIZ_QUESTIONS[currentQuestion].Question}</h2>
+              <div className="questionContainer">
                 {QUIZ_QUESTIONS[currentQuestion].Answers.map((answer) => (
                   <button
-                    className=""
+                    className="answerButton"
                     onClick={() => handleAnswerResponse(answer.isCorrect)}
                   >
                     {answer.Answer}
                   </button>
                 ))}
               </div>
-              <div className="">
+              <div className="scoreContainer">
                 <p>
                   {currentQuestion + 1}
                   <span>/{QUIZ_QUESTIONS.length}</span>

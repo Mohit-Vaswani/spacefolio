@@ -258,7 +258,8 @@ section p {
 
 /*========= FunFacts =========*/
 
-.funfact1, .funfact2{
+.funfact1,
+.funfact2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,8 +271,8 @@ section p {
   background: var(--bg-color);
 }
 
-.imgContainer img{
-  width: 200px
+.imgContainer img {
+  width: 200px;
 }
 
 /* Rotating Animation */
@@ -282,9 +283,58 @@ section p {
 
 @keyframes rotation {
   from {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
+}
+
+/* Quiz Container */
+
+.quizContainer {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  margin: 3rem auto;
+  border: 2px solid cyan;
+}
+
+.quizContainer h3 {
+  border-bottom: 2px solid cyan;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.quizContainer h2{
+  padding: 1rem 3rem;
+}
+
+.answerButton {
+  padding: 5px 20px;
+  margin: 0rem 0.5rem;
+  border: none;
+  background: cyan;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.answerButton:hover{
+  background: green;
+}
+
+.playButton {
+  padding: 10px 20px;
+  font-weight: bold;
+  background: cyan;
+  border: none;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.smallContainer p{
+  padding: 0;
 }
