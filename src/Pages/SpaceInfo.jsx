@@ -1,4 +1,4 @@
-import { useRef } from "react";
+// import { useRef } from "react";
 import {InfoCard} from "../Components/InfoCard";
 import planet1 from "../images/Asset1.png";
 import planet2 from "../images/Asset2.png";
@@ -11,10 +11,9 @@ import planet8 from "../images/Asset8.png";
 import planet9 from "../images/Asset9.png";
 
 const SpaceInfo = () => {
-    const CardInfo = useRef(null);
-
     return(
         <main>
+            <h1>Hello Friends</h1>
             <section>
                 <div className="cardText">
                     <h1>Space Info</h1>

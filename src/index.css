@@ -338,3 +338,10 @@ section p {
 .smallContainer p{
   padding: 0;
 }
+
+/* Card */
+
+article{
+  width: 300px;
+  background: #ffffff;
+}
