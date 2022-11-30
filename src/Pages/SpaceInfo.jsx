@@ -1,5 +1,6 @@
 // import { useRef } from "react";
 import {InfoCard} from "../Components/InfoCard";
+import Navbar from "../Components/Navbar";
 import planet1 from "../images/Asset1.png";
 import planet2 from "../images/Asset2.png";
 import planet3 from "../images/Asset3.png";
@@ -10,10 +11,10 @@ import planet7 from "../images/Asset7.png";
 import planet8 from "../images/Asset8.png";
 import planet9 from "../images/Asset9.png";
 
-const SpaceInfo = () => {
+export const SpaceInfo = () => {
     return(
         <main>
-            <h1>Hello Friends</h1>
+            <Navbar/>
             <section>
                 <div className="cardText">
                     <h1>Space Info</h1>
@@ -33,5 +34,3 @@ const SpaceInfo = () => {
         </main>
     )
 }
-
-export default SpaceInfo;
