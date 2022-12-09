@@ -18,7 +18,7 @@ const Home = () => {
             you can play a little quiz game while learning about several
             planets.
           </p>
-          <a href="/#/spaceinfo">
+          <a href="/#/funfact">
             <button className="btn wobble-hor-bottom">Explore</button>
           </a>
         </div>
